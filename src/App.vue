@@ -1,30 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+<!-- Menu -->
+  <MenuComponent/>
   <router-view/>
+
+<!-- Footer -->
+  <FooterComponent/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+  import MenuComponent from '@/components/MenuComponent.vue'
+  import FooterComponent from '@/components/FooterComponent.vue'
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  export default {
+    components: {
+      MenuComponent,
+      FooterComponent
     }
   }
-}
-</style>
+</script>
